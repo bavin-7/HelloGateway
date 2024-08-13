@@ -1,0 +1,19 @@
+spring:
+
+  application:
+
+    name: spring-cloud-gateway-app
+
+  cloud:
+
+    gateway:
+
+      routes:
+
+        - id: helloservice-route
+
+          uri: http://localhost:8072
+
+          predicates:
+
+            - Path=/rest/service/**
